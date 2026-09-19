@@ -1,12 +1,23 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-deep text-cream/80">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-4 lg:px-8">
         <div className="md:col-span-2">
-          <p className="font-serif text-3xl text-cream">Gloríficate</p>
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/logo.jpeg"
+              alt="Ministerio Cristiano Glorificate"
+              width={48}
+              height={48}
+              className="h-12 w-12 rounded-full bg-white object-cover"
+            />
+            <p className="font-serif text-3xl text-cream">Gloríficate</p>
+          </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/65">
-            Una iglesia cristiana comprometida con la Palabra, la adoración y el
-            amor al prójimo. Aquí hay un lugar para ti.
+            Ministerio Cristiano Glorificate: una familia comprometida con la
+            Palabra, la adoración y el amor al prójimo. Aquí hay un lugar para ti.
           </p>
         </div>
         <div>
@@ -52,7 +63,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-xs text-cream/45">
-        © {new Date().getFullYear()} Iglesia Gloríficate. Todos los derechos reservados.
+        © {new Date().getFullYear()} Ministerio Cristiano Glorificate. Todos los derechos reservados.
       </div>
     </footer>
   );

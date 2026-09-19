@@ -4,24 +4,52 @@ import Header from "@/components/Header";
 
 const ministries = [
   {
-    title: "Adoración",
+    title: "Ministerio de alabanza",
     description:
-      "Un espacio para alabar a Dios con música, oración y un corazón rendido.",
+      "Música en vivo para adorar a Dios en cada culto, con un corazón rendido.",
+    image: "/images/alabanza/banda.jpeg",
+    alt: "Equipo de alabanza del ministerio Glorificate",
   },
   {
-    title: "Niños y jóvenes",
+    title: "Ministerio de danza",
     description:
-      "Formación bíblica con alegría, para que cada generación conozca a Jesús.",
+      "Adoración con movimiento, banderas y vestuario para exaltar el nombre de Jesús.",
+    image: "/images/danza/grupo.jpeg",
+    alt: "Ministerio de danza con vestuario y banderas doradas",
   },
   {
-    title: "Grupos pequeños",
+    title: "Ministerio infantil",
     description:
-      "Comunidad íntima para estudiar la Palabra, orar y caminar juntos.",
+      "Pequeños Leones: niños que aprenden la Palabra con alegría, arte y juego.",
+    image: "/images/infantil/clase.jpeg",
+    alt: "Niños del ministerio infantil pintando en clase",
+    badge: "/images/logo-infantil.jpeg",
   },
   {
-    title: "Servicio",
+    title: "Dedicaciones",
     description:
-      "Manos que sirven a la ciudad: visitas, alimentos y apoyo a familias.",
+      "Celebramos a las familias y presentamos a los niños delante de Dios.",
+    image: "/images/dedicatoria/02.jpeg",
+    alt: "Familia en una dedicación en el ministerio",
+  },
+];
+
+const gallery = [
+  {
+    src: "/images/cultos/congregacion.jpeg",
+    alt: "Congregación y ministerio de danza en el salón",
+  },
+  {
+    src: "/images/cultos/navidad.jpeg",
+    alt: "Culto de Navidad en Glorificate",
+  },
+  {
+    src: "/images/cultos/ninos.jpeg",
+    alt: "Niños y jóvenes en una actividad del ministerio",
+  },
+  {
+    src: "/images/danza/folklore.jpeg",
+    alt: "Ministerio de danza con vestuario folklórico",
   },
 ];
 
@@ -54,17 +82,17 @@ export default function Home() {
       <main>
         <section id="inicio" className="relative min-h-screen">
           <Image
-            src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&w=2000&q=80"
-            alt="Interior de una iglesia iluminada"
+            src="/images/cultos/congregacion.jpeg"
+            alt="Congregación del Ministerio Cristiano Glorificate"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-center"
             sizes="100vw"
           />
           <div className="absolute inset-0 bg-linear-to-b from-deep/70 via-deep/55 to-deep/85" />
           <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col justify-end px-6 pb-20 pt-36 lg:px-8">
             <p className="text-sm font-medium uppercase tracking-[0.28em] text-gold-light">
-              Iglesia cristiana
+              Ministerio Cristiano Glorificate
             </p>
             <h1 className="mt-4 max-w-3xl font-serif text-5xl leading-[1.05] text-white sm:text-6xl lg:text-7xl">
               Un lugar para glorificar a Dios y encontrar familia.
@@ -100,8 +128,8 @@ export default function Home() {
         <section id="nosotros" className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:px-8">
           <div className="relative aspect-4/5 overflow-hidden rounded-[2rem]">
             <Image
-              src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1200&q=80"
-              alt="Comunidad reunida en adoración"
+              src="/images/dedicatoria/01.jpeg"
+              alt="Familia en dedicación frente al banner del ministerio"
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 40vw, 100vw"
@@ -172,6 +200,22 @@ export default function Home() {
                 </article>
               ))}
             </div>
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {gallery.map((photo) => (
+                <div
+                  key={photo.src}
+                  className="relative aspect-4/3 overflow-hidden rounded-2xl"
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -188,13 +232,36 @@ export default function Home() {
               historia.
             </p>
           </div>
-          <div className="mt-12 grid gap-px overflow-hidden rounded-3xl bg-ink/10 sm:grid-cols-2">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {ministries.map((ministry) => (
-              <article key={ministry.title} className="bg-cream p-8 sm:p-10">
-                <h3 className="font-serif text-2xl">{ministry.title}</h3>
-                <p className="mt-3 max-w-sm text-sm leading-7 text-ink-muted">
-                  {ministry.description}
-                </p>
+              <article
+                key={ministry.title}
+                className="overflow-hidden rounded-3xl bg-cream-dark"
+              >
+                <div className="relative aspect-4/3">
+                  <Image
+                    src={ministry.image}
+                    alt={ministry.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                  />
+                  {ministry.badge ? (
+                    <Image
+                      src={ministry.badge}
+                      alt="Logo Pequeños Leones"
+                      width={72}
+                      height={72}
+                      className="absolute right-4 top-4 h-16 w-16 rounded-full border-2 border-white object-cover shadow-lg"
+                    />
+                  ) : null}
+                </div>
+                <div className="p-8 sm:p-10">
+                  <h3 className="font-serif text-2xl">{ministry.title}</h3>
+                  <p className="mt-3 max-w-sm text-sm leading-7 text-ink-muted">
+                    {ministry.description}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
@@ -241,8 +308,8 @@ export default function Home() {
           className="relative overflow-hidden px-6 py-28 lg:px-8"
         >
           <Image
-            src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&w=1800&q=80"
-            alt="Arquitectura de iglesia con luz natural"
+            src="/images/cultos/navidad.jpeg"
+            alt="Salón de cultos del Ministerio Cristiano Glorificate"
             fill
             className="object-cover"
             sizes="100vw"

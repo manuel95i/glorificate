@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
@@ -17,18 +18,14 @@ export default function Header() {
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 lg:px-8">
         <a href="#inicio" className="flex items-center gap-3 text-white">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold-light/60">
-            <svg
-              viewBox="0 0 24 24"
-              className="h-5 w-5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.4"
-              aria-hidden
-            >
-              <path d="M12 3v18M7 8h10" />
-            </svg>
-          </span>
+          <Image
+            src="/images/logo.jpeg"
+            alt="Ministerio Cristiano Glorificate"
+            width={48}
+            height={48}
+            className="h-12 w-12 rounded-full bg-white object-cover"
+            priority
+          />
           <span className="font-serif text-2xl tracking-wide">Gloríficate</span>
         </a>
 
