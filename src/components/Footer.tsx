@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ministries } from "@/lib/content";
+import { address, mapsUrl, nav, whatsappUrl } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -16,8 +19,8 @@ export default function Footer() {
             <p className="font-serif text-3xl text-cream">Gloríficate</p>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/65">
-            Ministerio Cristiano Glorificate: una familia comprometida con la
-            Palabra, la adoración y el amor al prójimo. Aquí hay un lugar para ti.
+            Iglesia y labor social en Panamá. Adoramos a Dios, formamos familias
+            y servimos a la comunidad desde Academia Hisao Lee.
           </p>
         </div>
         <div>
@@ -25,26 +28,20 @@ export default function Footer() {
             Explorar
           </p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li>
-              <a href="#nosotros" className="hover:text-gold-light">
-                Nosotros
-              </a>
-            </li>
-            <li>
-              <a href="#cultos" className="hover:text-gold-light">
-                Horarios
-              </a>
-            </li>
-            <li>
-              <a href="#ministerios" className="hover:text-gold-light">
-                Ministerios
-              </a>
-            </li>
-            <li>
-              <a href="#eventos" className="hover:text-gold-light">
-                Eventos
-              </a>
-            </li>
+            {nav.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-gold-light">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            {ministries.map((ministry) => (
+              <li key={ministry.slug}>
+                <Link href={`/ministerios/${ministry.slug}`} className="hover:text-gold-light">
+                  {ministry.shortTitle}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
@@ -52,18 +49,29 @@ export default function Footer() {
             Contacto
           </p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li>Av. de la Esperanza 120</li>
-            <li>Ciudad de México</li>
+            {address.lines.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
             <li>
-              <a href="mailto:hola@glorificate.mx" className="hover:text-gold-light">
-                hola@glorificate.mx
+              <a href={mapsUrl()} target="_blank" rel="noopener noreferrer" className="hover:text-gold-light">
+                Google Maps
+              </a>
+            </li>
+            <li>
+              <a
+                href={whatsappUrl("Hola, quiero información del Ministerio Cristiano Glorificate.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold-light"
+              >
+                WhatsApp principal
               </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-xs text-cream/45">
-        © {new Date().getFullYear()} Ministerio Cristiano Glorificate. Todos los derechos reservados.
+        © {new Date().getFullYear()} Ministerio Cristiano Glorificate. Iglesia y labor social en Panamá.
       </div>
     </footer>
   );
