@@ -3,6 +3,8 @@ import { type WhatsAppKey } from "@/lib/site";
 export type Photo = {
   src: string;
   alt: string;
+  width: number;
+  height: number;
 };
 
 export type Ministry = {
@@ -36,10 +38,10 @@ export const ministries: Ministry[] = [
     message: "Hola, quiero información del Ministerio de alabanza.",
     schedule: "Horario de ensayos: consúltalo por WhatsApp si te interesa unirte.",
     photos: [
-      { src: "/images/alabanza/banda.jpeg", alt: "Banda de alabanza con instrumentos" },
-      { src: "/images/alabanza/culto.jpeg", alt: "Alabanza frente al banner del ministerio" },
-      { src: "/images/alabanza/navidad.jpeg", alt: "Alabanza en celebración de Navidad" },
-      { src: "/images/alabanza/equipo.jpeg", alt: "Equipo del ministerio de alabanza" },
+      { src: "/images/alabanza/banda.jpeg", alt: "Banda de alabanza con instrumentos", width: 925, height: 599 },
+      { src: "/images/alabanza/culto.jpeg", alt: "Alabanza frente al banner del ministerio", width: 848, height: 478 },
+      { src: "/images/alabanza/navidad.jpeg", alt: "Alabanza en celebración de Navidad", width: 1329, height: 599 },
+      { src: "/images/alabanza/equipo.jpeg", alt: "Equipo del ministerio de alabanza", width: 1600, height: 1200 },
     ],
   },
   {
@@ -58,13 +60,13 @@ export const ministries: Ministry[] = [
     message: "Hola, quiero información del Ministerio de danza.",
     schedule: "Horario de ensayos: consúltalo por WhatsApp si te interesa unirte.",
     photos: [
-      { src: "/images/danza/grupo.jpeg", alt: "Grupo de danza con vestuario y banderas doradas" },
-      { src: "/images/danza/banderas.jpeg", alt: "Ministerio de danza con banderas en Los Andes" },
-      { src: "/images/danza/folklore.jpeg", alt: "Danza folklórica panameña" },
-      { src: "/images/danza/panderos.jpeg", alt: "Danza con panderos en Tabernáculo de la Fe" },
-      { src: "/images/danza/vestuario.jpeg", alt: "Vestuario ministerial de danza" },
-      { src: "/images/danza/ministerio.jpeg", alt: "Ministerio de danza en presentación" },
-      { src: "/images/danza/presentacion.jpeg", alt: "Presentación de danza en el salón" },
+      { src: "/images/danza/grupo.jpeg", alt: "Grupo de danza con vestuario y banderas doradas", width: 1600, height: 900 },
+      { src: "/images/danza/banderas.jpeg", alt: "Ministerio de danza con banderas en Los Andes", width: 1600, height: 1200 },
+      { src: "/images/danza/folklore.jpeg", alt: "Danza folklórica panameña", width: 1280, height: 468 },
+      { src: "/images/danza/panderos.jpeg", alt: "Danza con panderos en Tabernáculo de la Fe", width: 799, height: 599 },
+      { src: "/images/danza/vestuario.jpeg", alt: "Vestuario ministerial de danza", width: 799, height: 599 },
+      { src: "/images/danza/ministerio.jpeg", alt: "Ministerio de danza en presentación", width: 1337, height: 599 },
+      { src: "/images/danza/presentacion.jpeg", alt: "Presentación de danza en el salón", width: 1295, height: 599 },
     ],
   },
   {
@@ -78,20 +80,20 @@ export const ministries: Ministry[] = [
       "Las clases combinan historia bíblica, manualidades, juegos y momentos de adoración. También celebramos Navidad, actividades recreativas y tiempos en familia.",
       "Creemos que cada niño es semilla: Proverbios 22:6 nos recuerda a instruir al niño en su camino.",
     ],
-    image: "/images/infantil/01.jpeg",
+    image: "/images/infantil/07.jpeg",
     badge: "/images/logo-infantil.jpeg",
     whatsapp: "principal",
     message: "Hola, quiero información del Ministerio infantil Pequeños Leones.",
     photos: [
-      { src: "/images/infantil/01.jpeg", alt: "Niños pintando arcoíris en clase bíblica" },
-      { src: "/images/infantil/02.jpeg", alt: "Clase infantil trabajando en sus dibujos" },
-      { src: "/images/infantil/03.jpeg", alt: "Niños en una salida del ministerio infantil" },
-      { src: "/images/infantil/04.jpeg", alt: "Niños jugando en el parque" },
-      { src: "/images/infantil/05.jpeg", alt: "Representación del nacimiento" },
-      { src: "/images/infantil/06.jpeg", alt: "Presentación navideña de los niños" },
-      { src: "/images/infantil/07.jpeg", alt: "Niños en el pesebre navideño" },
-      { src: "/images/infantil/08.jpeg", alt: "Actividad infantil en el salón congregacional" },
-      { src: "/images/infantil/09.jpeg", alt: "Juegos y mini basketball del ministerio infantil" },
+      { src: "/images/infantil/01.jpeg", alt: "Niños pintando arcoíris en clase bíblica", width: 1200, height: 1600 },
+      { src: "/images/infantil/02.jpeg", alt: "Clase infantil trabajando en sus dibujos", width: 1200, height: 1600 },
+      { src: "/images/infantil/03.jpeg", alt: "Niños en una salida del ministerio infantil", width: 1600, height: 1198 },
+      { src: "/images/infantil/04.jpeg", alt: "Niños jugando en el parque", width: 1198, height: 1600 },
+      { src: "/images/infantil/05.jpeg", alt: "Representación del nacimiento", width: 1600, height: 1200 },
+      { src: "/images/infantil/06.jpeg", alt: "Presentación navideña de los niños", width: 1200, height: 1600 },
+      { src: "/images/infantil/07.jpeg", alt: "Niños en el pesebre navideño", width: 1600, height: 1200 },
+      { src: "/images/infantil/08.jpeg", alt: "Actividad infantil en el salón congregacional", width: 4064, height: 3048 },
+      { src: "/images/infantil/09.jpeg", alt: "Juegos y mini basketball del ministerio infantil", width: 3048, height: 4064 },
     ],
   },
   {
@@ -108,8 +110,8 @@ export const ministries: Ministry[] = [
     whatsapp: "principal",
     message: "Hola, quiero información sobre dedicaciones.",
     photos: [
-      { src: "/images/dedicatoria/01.jpeg", alt: "Familia en dedicación frente al banner de Glorificate" },
-      { src: "/images/dedicatoria/02.jpeg", alt: "Dedicación de un bebé con la familia" },
+      { src: "/images/dedicatoria/01.jpeg", alt: "Familia en dedicación frente al banner de Glorificate", width: 1297, height: 599 },
+      { src: "/images/dedicatoria/02.jpeg", alt: "Dedicación de un bebé con la familia", width: 1329, height: 599 },
     ],
   },
 ];
@@ -168,34 +170,15 @@ export const faqs = [
   },
 ];
 
-export const socialPrograms = [
-  {
-    title: "Familias",
-    text: "Acompañamos a hogares con oración, visita y orientación. Nadie debería caminar solo en una crisis.",
-  },
-  {
-    title: "Niñez",
-    text: "Pequeños Leones no es solo una clase: es un espacio seguro de formación, juego y cuidado para los niños de la congregación y la comunidad.",
-  },
-  {
-    title: "Comunidad",
-    text: "Participamos en actividades abiertas, celebraciones y tiempos de servicio para bendecir el entorno donde Dios nos plantó.",
-  },
-  {
-    title: "Presencia en tiempos difíciles",
-    text: "Durante la pandemia seguimos ministrando en casa: alabanza, danza y Palabra por videollamada, para que nadie quedara desconectado.",
-  },
-];
-
 export const gallerySections = [
   {
     title: "Congregación y cultos",
     photos: [
-      { src: "/images/cultos/congregacion.jpeg", alt: "Congregación y danza en el salón" },
-      { src: "/images/cultos/navidad.jpeg", alt: "Culto de Navidad" },
-      { src: "/images/cultos/ninos.jpeg", alt: "Niños y jóvenes en actividad" },
-      { src: "/images/cultos/actividad.jpeg", alt: "Actividad congregacional" },
-      { src: "/images/cultos/alabanza-salon.jpeg", alt: "Alabanza en el salón" },
+      { src: "/images/cultos/congregacion.jpeg", alt: "Congregación y danza en el salón", width: 799, height: 599 },
+      { src: "/images/cultos/navidad.jpeg", alt: "Culto de Navidad", width: 1329, height: 599 },
+      { src: "/images/cultos/ninos.jpeg", alt: "Niños y jóvenes en actividad", width: 1329, height: 599 },
+      { src: "/images/cultos/actividad.jpeg", alt: "Actividad congregacional", width: 1331, height: 599 },
+      { src: "/images/cultos/alabanza-salon.jpeg", alt: "Alabanza en el salón", width: 1329, height: 599 },
     ],
   },
   {
@@ -217,8 +200,8 @@ export const gallerySections = [
   {
     title: "En pandemia",
     photos: [
-      { src: "/images/pandemia/culto-virtual.jpeg", alt: "Culto virtual con danza y guitarra" },
-      { src: "/images/pandemia/reunion-virtual.jpeg", alt: "Reunión virtual de la congregación" },
+      { src: "/images/pandemia/culto-virtual.jpeg", alt: "Culto virtual con danza y guitarra", width: 1170, height: 540 },
+      { src: "/images/pandemia/reunion-virtual.jpeg", alt: "Reunión virtual de la congregación", width: 1170, height: 540 },
     ],
   },
 ];

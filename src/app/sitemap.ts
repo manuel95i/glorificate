@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/nosotros",
     "/ministerios",
-    "/labor-social",
     "/galeria",
     "/ofrendas",
     "/contacto",

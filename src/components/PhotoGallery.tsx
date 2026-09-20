@@ -10,19 +10,20 @@ export default function PhotoGallery({ photos }: { photos: Photo[] }) {
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
         {photos.map((photo, index) => (
           <button
             key={photo.src}
             type="button"
             onClick={() => setActive(index)}
-            className="group relative aspect-4/3 overflow-hidden rounded-2xl text-left"
+            className="group relative mb-4 block w-full overflow-hidden rounded-2xl text-left"
           >
             <Image
               src={photo.src}
               alt={photo.alt}
-              fill
-              className="object-cover transition duration-500 group-hover:scale-105"
+              width={photo.width}
+              height={photo.height}
+              className="h-auto w-full object-cover transition duration-500 group-hover:scale-105"
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             />
             <span className="sr-only">Ampliar: {photo.alt}</span>

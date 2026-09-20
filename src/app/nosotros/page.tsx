@@ -65,26 +65,28 @@ export default function NosotrosPage() {
           <h2 className="font-serif text-4xl">También en tiempos difíciles</h2>
           <p className="mt-4 text-base leading-8 text-ink-muted">
             Durante la pandemia no dejamos de congregarnos: alabanza, danza y
-            Palabra siguieron desde los hogares. Esa misma determinación guía
-            hoy nuestra labor social: la iglesia no cierra cuando la ciudad duele.
+            Palabra siguieron desde los hogares. La iglesia no cierra cuando hay
+            dificultad.
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl">
             <Image
               src="/images/pandemia/culto-virtual.jpeg"
               alt="Culto virtual durante la pandemia"
-              fill
-              className="object-cover"
+              width={1170}
+              height={540}
+              className="h-auto w-full object-cover"
               sizes="40vw"
             />
           </div>
-          <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-2xl">
             <Image
               src="/images/pandemia/reunion-virtual.jpeg"
               alt="Reunión virtual de la congregación"
-              fill
-              className="object-cover"
+              width={1170}
+              height={540}
+              className="h-auto w-full object-cover"
               sizes="40vw"
             />
           </div>

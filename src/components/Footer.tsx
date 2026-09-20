@@ -19,8 +19,8 @@ export default function Footer() {
             <p className="font-serif text-3xl text-cream">Gloríficate</p>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-cream/65">
-            Iglesia y labor social en Panamá. Adoramos a Dios, formamos familias
-            y servimos a la comunidad desde Academia Hisao Lee.
+            Ministerio Cristiano Glorificate en Panamá. Adoramos a Dios, formamos
+            familias y nos reunimos en Academia Hisao Lee.
           </p>
         </div>
         <div>
@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 py-6 text-center text-xs text-cream/45">
-        © {new Date().getFullYear()} Ministerio Cristiano Glorificate. Iglesia y labor social en Panamá.
+        © {new Date().getFullYear()} Ministerio Cristiano Glorificate. Todos los derechos reservados.
       </div>
     </footer>
   );

@@ -59,7 +59,6 @@ export function mapsUrl() {
 export const nav = [
   { href: "/nosotros", label: "Nosotros" },
   { href: "/ministerios", label: "Ministerios" },
-  { href: "/labor-social", label: "Labor social" },
   { href: "/galeria", label: "Galería" },
   { href: "/ofrendas", label: "Ofrendas" },
   { href: "/contacto", label: "Contacto" },

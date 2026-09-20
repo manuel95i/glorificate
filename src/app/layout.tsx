@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Gloríficate",
   },
   description:
-    "Iglesia cristiana y labor social en Panamá. Culto los viernes, ministerios de alabanza, danza y Pequeños Leones. Academia Hisao Lee.",
+    "Iglesia cristiana en Panamá. Culto los viernes, ministerios de alabanza, danza y Pequeños Leones. Academia Hisao Lee.",
   keywords: [
     "Glorificate",
     "iglesia Panamá",
@@ -30,12 +30,11 @@ export const metadata: Metadata = {
     "alabanza",
     "danza cristiana",
     "ministerio infantil",
-    "labor social",
   ],
   openGraph: {
     title: "Ministerio Cristiano Glorificate",
     description:
-      "Iglesia y labor social en Panamá. Un lugar para glorificar a Dios y servir a la ciudad.",
+      "Iglesia cristiana en Panamá. Un lugar para glorificar a Dios y encontrar familia.",
     locale: "es_PA",
     type: "website",
   },

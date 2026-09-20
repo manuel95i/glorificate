@@ -16,7 +16,7 @@ export default function OfrendasPage() {
       <PageHero
         eyebrow="Generosidad"
         title="Ofrendas para la obra"
-        text="Tu siembra sostiene el culto, los ministerios y la labor social. Gracias por dar con alegría."
+        text="Tu siembra sostiene el culto y los ministerios. Gracias por dar con alegría."
         image="/images/alabanza/culto.jpeg"
       />
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
