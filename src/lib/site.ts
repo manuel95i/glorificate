@@ -1,7 +1,7 @@
 const PANAMA_CODE = "507";
 
 export const whatsapp = {
-  principal: "6552-5703",
+  principal: "6919-5740",
   danza: "6449-8564",
   alabanza: "6852-7493",
 } as const;
@@ -29,19 +29,10 @@ export const schedules = [
     time: "7:30 p.m. a 9:30 p.m.",
     note: "Adoración, Palabra y comunión para toda la familia.",
   },
-  {
-    title: "Práctica de danza",
-    day: "Lunes",
-    time: "6:00 p.m. a 8:00 p.m.",
-    note: "Ensayo del ministerio de danza.",
-  },
-  {
-    title: "Alabanza",
-    day: "Miércoles",
-    time: "7:00 p.m. a 9:00 p.m.",
-    note: "Ensayo del ministerio de alabanza.",
-  },
 ] as const;
+
+export const rehearsalNote =
+  "Si te interesa unirte a danza o alabanza, pregunta el horario de los ensayos cuando nos escribas o llames.";
 
 function panamaWhatsapp(number: string) {
   const digits = number.replace(/\D/g, "");

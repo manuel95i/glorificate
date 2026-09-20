@@ -4,7 +4,7 @@ import FaqList from "@/components/FaqList";
 import PageHero from "@/components/PageHero";
 import SiteShell from "@/components/SiteShell";
 import WhatsAppLink, { MapsLink } from "@/components/WhatsAppLink";
-import { address, schedules, whatsapp } from "@/lib/site";
+import { address, rehearsalNote, schedules, whatsapp } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -45,6 +45,7 @@ export default function ContactoPage() {
               </li>
             ))}
           </ul>
+          <p className="mt-4 max-w-md text-sm leading-7 text-ink-muted">{rehearsalNote}</p>
         </div>
         <ContactForm />
       </section>

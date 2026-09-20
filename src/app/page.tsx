@@ -6,7 +6,7 @@ import SiteShell from "@/components/SiteShell";
 import { MapsLink } from "@/components/WhatsAppLink";
 import WhatsAppLink from "@/components/WhatsAppLink";
 import { ministries } from "@/lib/content";
-import { address, offerings, schedules, whatsapp } from "@/lib/site";
+import { address, offerings, rehearsalNote, schedules, whatsapp } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -106,6 +106,10 @@ export default function Home() {
                 <p className="mt-4 text-sm leading-6 text-ink-muted">{item.note}</p>
               </article>
             ))}
+            <article className="rounded-3xl bg-cream p-8 md:col-span-2">
+              <h3 className="font-serif text-2xl">Ensayos de danza y alabanza</h3>
+              <p className="mt-4 text-sm leading-6 text-ink-muted">{rehearsalNote}</p>
+            </article>
           </div>
         </div>
       </section>

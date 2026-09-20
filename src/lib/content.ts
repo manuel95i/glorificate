@@ -28,13 +28,13 @@ export const ministries: Ministry[] = [
       "Música en vivo para adorar a Dios en cada culto, con un corazón rendido.",
     description: [
       "El ministerio de alabanza acompaña a la congregación a entrar en la presencia de Dios con instrumentos, voces y un espíritu de servicio.",
-      "Ensayamos los miércoles de 7:00 p.m. a 9:00 p.m. para ministrar con excelencia cada viernes en el culto.",
-      "Si cantas, tocas un instrumento o sientes el llamado a servir detrás de escena, hay un lugar para ti.",
+      "Ministramos cada viernes en el culto. Si cantas, tocas un instrumento o sientes el llamado a servir detrás de escena, hay un lugar para ti.",
+      "El horario de los ensayos se coordina con quienes están interesados: escríbenos o llámanos y te lo indicamos.",
     ],
     image: "/images/alabanza/banda.jpeg",
     whatsapp: "alabanza",
     message: "Hola, quiero información del Ministerio de alabanza.",
-    schedule: "Miércoles · 7:00 p.m. a 9:00 p.m.",
+    schedule: "Horario de ensayos: consúltalo por WhatsApp si te interesa unirte.",
     photos: [
       { src: "/images/alabanza/banda.jpeg", alt: "Banda de alabanza con instrumentos" },
       { src: "/images/alabanza/culto.jpeg", alt: "Alabanza frente al banner del ministerio" },
@@ -51,12 +51,12 @@ export const ministries: Ministry[] = [
     description: [
       "La danza en Gloríficate es una ofrenda: el cuerpo, las banderas y el vestuario anuncian la gloria de Dios delante de la congregación.",
       "Participamos en cultos, actividades especiales y presentaciones junto a otras iglesias y ministerios de Panamá.",
-      "Las prácticas son los lunes de 6:00 p.m. a 8:00 p.m. Recibimos a quienes deseen aprender con humildad y disciplina.",
+      "Recibimos a quienes deseen aprender con humildad y disciplina. Si te interesa unirte, pregunta el horario de los ensayos cuando nos escribas o llames.",
     ],
     image: "/images/danza/grupo.jpeg",
     whatsapp: "danza",
     message: "Hola, quiero información del Ministerio de danza.",
-    schedule: "Lunes · 6:00 p.m. a 8:00 p.m.",
+    schedule: "Horario de ensayos: consúltalo por WhatsApp si te interesa unirte.",
     photos: [
       { src: "/images/danza/grupo.jpeg", alt: "Grupo de danza con vestuario y banderas doradas" },
       { src: "/images/danza/banderas.jpeg", alt: "Ministerio de danza con banderas en Los Andes" },
@@ -160,7 +160,7 @@ export const faqs = [
   },
   {
     q: "¿Cómo me uno a un ministerio?",
-    a: "Escríbenos por WhatsApp al ministerio que te interesa. Alabanza, danza e infantil tienen canales directos.",
+    a: "Escríbenos o llámanos al WhatsApp del ministerio que te interesa. Si deseas unirte a danza o alabanza, ahí mismo te indicamos el horario de los ensayos.",
   },
   {
     q: "¿Dónde se reúnen?",

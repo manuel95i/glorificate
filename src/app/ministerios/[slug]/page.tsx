@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import PhotoGallery from "@/components/PhotoGallery";
 import SiteShell from "@/components/SiteShell";
 import WhatsAppLink from "@/components/WhatsAppLink";
+import MinistryGame from "@/components/games/MinistryGame";
 import { getMinistry, ministries } from "@/lib/content";
 import { whatsapp } from "@/lib/site";
 
@@ -64,6 +65,7 @@ export default async function MinistryPage({ params }: Props) {
         <div className="mt-8">
           <PhotoGallery photos={ministry.photos} />
         </div>
+        <MinistryGame slug={ministry.slug} />
       </section>
     </SiteShell>
   );
