@@ -20,7 +20,15 @@ export const offerings: {
   number: string;
   holder: string;
   extra?: string;
-}[] = [];
+}[] = [
+  {
+    bank: "Caja de Ahorros",
+    type: "Ahorro",
+    number: "300221141",
+    holder: "Ministerio Cristiano Glorificate (RG)",
+    extra: "Caja de Ahorros no usa Yappy. El código QR muestra los datos para copiarlos rápido al hacer una transferencia.",
+  },
+];
 
 export const schedules = [
   {
