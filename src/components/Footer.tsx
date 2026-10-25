@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ministries } from "@/lib/content";
-import { address, mapsUrl, nav, whatsappUrl } from "@/lib/site";
+import { address, instagram, mapsUrl, nav, whatsappUrl } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -65,6 +65,16 @@ export default function Footer() {
                 className="hover:text-gold-light"
               >
                 WhatsApp principal
+              </a>
+            </li>
+            <li>
+              <a
+                href={instagram.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold-light"
+              >
+                Instagram {instagram.handle}
               </a>
             </li>
           </ul>

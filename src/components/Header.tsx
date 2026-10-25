@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ministries } from "@/lib/content";
-import { nav } from "@/lib/site";
+import { instagram, nav } from "@/lib/site";
 
 export default function Header({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -68,6 +68,14 @@ export default function Header({ overlay = false }: { overlay?: boolean }) {
               </Link>
             ),
           )}
+          <a
+            href={instagram.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition hover:text-gold-light"
+          >
+            Instagram
+          </a>
           <Link
             href="/contacto"
             className="rounded-full border border-gold-light/70 px-5 py-2 text-gold-light transition hover:bg-gold-light hover:text-deep"
@@ -111,6 +119,14 @@ export default function Header({ overlay = false }: { overlay?: boolean }) {
               {ministry.shortTitle}
             </Link>
           ))}
+          <a
+            href={instagram.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-xl px-4 py-3 text-sm hover:bg-white/5"
+          >
+            Instagram {instagram.handle}
+          </a>
         </nav>
       ) : null}
     </header>

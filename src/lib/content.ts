@@ -33,15 +33,15 @@ export const ministries: Ministry[] = [
       "Ministramos cada viernes en el culto. Si cantas, tocas un instrumento o sientes el llamado a servir detrás de escena, hay un lugar para ti.",
       "El horario de los ensayos se coordina con quienes están interesados: escríbenos o llámanos y te lo indicamos.",
     ],
-    image: "/images/alabanza/banda.jpeg",
+    image: "/images/alabanza/equipo.jpeg",
     whatsapp: "alabanza",
     message: "Hola, quiero información del Ministerio de alabanza.",
     schedule: "Horario de ensayos: consúltalo por WhatsApp si te interesa unirte.",
     photos: [
+      { src: "/images/alabanza/equipo.jpeg", alt: "Equipo del ministerio de alabanza, mujeres y hombres", width: 1600, height: 1200 },
       { src: "/images/alabanza/banda.jpeg", alt: "Banda de alabanza con instrumentos", width: 925, height: 599 },
       { src: "/images/alabanza/culto.jpeg", alt: "Alabanza frente al banner del ministerio", width: 848, height: 478 },
       { src: "/images/alabanza/navidad.jpeg", alt: "Alabanza en celebración de Navidad", width: 1329, height: 599 },
-      { src: "/images/alabanza/equipo.jpeg", alt: "Equipo del ministerio de alabanza", width: 1600, height: 1200 },
     ],
   },
   {

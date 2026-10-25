@@ -1,4 +1,4 @@
-import { mapsUrl, whatsapp, whatsappUrl } from "@/lib/site";
+import { instagram, mapsUrl, whatsapp, whatsappUrl } from "@/lib/site";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 type Props = {
@@ -36,6 +36,20 @@ export function MapsLink({
 }) {
   return (
     <a href={mapsUrl()} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+    </a>
+  );
+}
+
+export function InstagramLink({
+  children = `Instagram ${instagram.handle}`,
+  className = "inline-flex items-center justify-center rounded-full bg-[#E1306C] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90",
+}: {
+  children?: string;
+  className?: string;
+}) {
+  return (
+    <a href={instagram.href} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
     </a>
   );

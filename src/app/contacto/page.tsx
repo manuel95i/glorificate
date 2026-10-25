@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import FaqList from "@/components/FaqList";
 import PageHero from "@/components/PageHero";
 import SiteShell from "@/components/SiteShell";
-import WhatsAppLink, { MapsLink } from "@/components/WhatsAppLink";
+import WhatsAppLink, { InstagramLink, MapsLink } from "@/components/WhatsAppLink";
 import { address, rehearsalNote, schedules, whatsapp } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "WhatsApp, horarios y cómo llegar al Ministerio Cristiano Glorificate en Academia Hisao Lee.",
+    "WhatsApp, Instagram @mcg.jesus, horarios y cómo llegar al Ministerio Cristiano Glorificate en Academia Hisao Lee.",
 };
 
 export default function ContactoPage() {
@@ -18,7 +19,7 @@ export default function ContactoPage() {
       <PageHero
         eyebrow="Estamos cerca"
         title="Contacto y cómo llegar"
-        text="Escríbenos al WhatsApp principal, de danza o de alabanza. El culto es los viernes de 7:30 p.m. a 9:30 p.m."
+        text="Escríbenos al WhatsApp, síguenos en Instagram @mcg.jesus o ven al culto los viernes de 7:30 p.m. a 9:30 p.m."
         image="/images/cultos/navidad.jpeg"
       />
       <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8">
@@ -27,6 +28,7 @@ export default function ContactoPage() {
           <p className="mt-4 text-sm leading-7 text-ink-muted">{address.lines.join(" · ")}</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <MapsLink />
+            <InstagramLink />
             <WhatsAppLink text="Hola, quiero contactar al Ministerio Cristiano Glorificate.">
               Principal {whatsapp.principal}
             </WhatsAppLink>
@@ -36,6 +38,15 @@ export default function ContactoPage() {
             <WhatsAppLink text="Hola, quiero información del Ministerio de alabanza." number={whatsapp.alabanza}>
               Alabanza {whatsapp.alabanza}
             </WhatsAppLink>
+          </div>
+          <div className="mt-8 overflow-hidden rounded-2xl">
+            <Image
+              src="/images/instagram-qr.png"
+              alt="Código QR de Instagram @mcg.jesus"
+              width={800}
+              height={480}
+              className="h-auto w-full"
+            />
           </div>
           <h3 className="mt-12 font-serif text-2xl">Horarios</h3>
           <ul className="mt-4 space-y-3 text-sm text-ink-muted">

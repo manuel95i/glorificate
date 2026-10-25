@@ -3,10 +3,9 @@ import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import FaqList from "@/components/FaqList";
 import SiteShell from "@/components/SiteShell";
-import { MapsLink } from "@/components/WhatsAppLink";
-import WhatsAppLink from "@/components/WhatsAppLink";
+import WhatsAppLink, { InstagramLink, MapsLink } from "@/components/WhatsAppLink";
 import { ministries } from "@/lib/content";
-import { address, offerings, rehearsalNote, schedules, whatsapp } from "@/lib/site";
+import { address, instagram, offerings, rehearsalNote, schedules, whatsapp } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -241,7 +240,8 @@ export default function Home() {
             <h2 className="font-serif text-4xl sm:text-5xl">Estamos para servirte</h2>
             <p className="mt-5 max-w-md text-sm leading-7 text-ink-muted">
               Elige el WhatsApp: principal, danza o alabanza. También puedes
-              escribirnos para oración o para unirte a un ministerio.
+              seguirnos en Instagram {instagram.handle} o escribirnos para
+              oración o para unirte a un ministerio.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <WhatsAppLink text="Hola, quiero contactar al Ministerio Cristiano Glorificate.">
@@ -259,6 +259,7 @@ export default function Home() {
               >
                 Alabanza
               </WhatsAppLink>
+              <InstagramLink className="inline-flex items-center justify-center rounded-full bg-[#E1306C] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90" />
             </div>
           </div>
           <ContactForm />

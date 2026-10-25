@@ -64,6 +64,11 @@ export function mapsUrl() {
   return address.mapsHref;
 }
 
+export const instagram = {
+  handle: "@mcg.jesus",
+  href: "https://www.instagram.com/mcg.jesus/",
+};
+
 export const nav = [
   { href: "/nosotros", label: "Nosotros" },
   { href: "/ministerios", label: "Ministerios" },
