@@ -69,6 +69,8 @@ export const instagram = {
   href: "https://www.instagram.com/mcg.jesus/",
 };
 
+export const siteUrl = "https://glorificate-mcg.com";
+
 export const nav = [
   { href: "/nosotros", label: "Nosotros" },
   { href: "/ministerios", label: "Ministerios" },

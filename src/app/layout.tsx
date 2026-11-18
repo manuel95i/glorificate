@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import { address } from "@/lib/site";
+import { address, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -17,6 +17,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Ministerio Cristiano Glorificate",
     template: "%s | Gloríficate",
