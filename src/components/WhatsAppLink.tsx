@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import { instagram, mapsUrl, whatsapp, whatsappUrl } from "@/lib/site";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 type Props = {
   text?: string;
   number?: string;
-  children: string;
+  children: ReactNode;
   className?: string;
 };
 
@@ -31,7 +32,7 @@ export function MapsLink({
   children = "Cómo llegar · Google Maps",
   className = "inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-medium text-white transition hover:bg-gold-light hover:text-deep",
 }: {
-  children?: string;
+  children?: ReactNode;
   className?: string;
 }) {
   return (
@@ -45,7 +46,7 @@ export function InstagramLink({
   children = `Instagram ${instagram.handle}`,
   className = "inline-flex items-center justify-center rounded-full bg-[#E1306C] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90",
 }: {
-  children?: string;
+  children?: ReactNode;
   className?: string;
 }) {
   return (
