@@ -28,7 +28,7 @@ export default function Home() {
             Un lugar para glorificar a Dios y encontrar familia.
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/75">
-            Adoración, familia y niñez. Culto los viernes en Academia Hisao Lee.
+            Adoración, familia y niñez. Culto los viernes en la Academia Hisao Lee.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
